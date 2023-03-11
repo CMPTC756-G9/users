@@ -9,7 +9,8 @@ services:
       - POSTGRES_PASSWORD=123
   web:
     build: .
-    command: uwsgi --http 0.0.0.0:8000 --module distributed.wsgi
+#    command: uwsgi --http 0.0.0.0:8000 --module distributed.wsgi
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
