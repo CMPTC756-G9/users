@@ -1,8 +1,8 @@
-from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 
 from users.models import User
 from users.serializers import UserSerializer
+
 
 class UserViewset(ModelViewSet):
     queryset = User.objects.all()
@@ -11,5 +11,3 @@ class UserViewset(ModelViewSet):
 
 
 
-
-# Create your views here.
