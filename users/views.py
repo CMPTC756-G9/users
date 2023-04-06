@@ -23,6 +23,8 @@ class UserViewset(ModelViewSet):
             CREATE_ACCOUNT_URL,
             json={
                 'user_id': serializer.data.get('id')
+            },
+            headers={
+                'Host': '0.0.0.0',
             }
         ).json()
-        print('yo')
